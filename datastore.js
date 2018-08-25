@@ -96,7 +96,7 @@ function connect() {
   return new Promise(function (resolve, reject) {
     try {
       mongodb.MongoClient.connect(MONGODB_URI, function(err, db) {
-        if(err) reject(err);
+        if(err) reject(err);        
         collection = db.collection(process.env.COLLECTION);
         resolve(collection);
       });
